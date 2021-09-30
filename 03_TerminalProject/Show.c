@@ -5,6 +5,7 @@
 
 enum {
     KEY_ESC = 27,
+    KEY_SPACE = 32,
     STR_BUF_SIZE = 1000
 };
 
@@ -143,7 +144,7 @@ main(int argc, char **argv) {
         if (ch == KEY_ESC) {
             loop = 0;
         }
-        if (ch == KEY_DOWN) {
+        if (ch == KEY_DOWN || ch == KEY_SPACE) {
             if (text_pos + 1 < str_cnt) text_pos += 1;
         } else if (ch == KEY_UP) {
             if (text_pos - 1 >= 0) text_pos -= 1;
