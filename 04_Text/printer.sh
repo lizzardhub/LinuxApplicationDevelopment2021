@@ -1,11 +1,3 @@
-# tput clear
-# tput cup 0 0
-# echo -n "A"
-# tput cup 0 10
-# echo -n "B"
-# tput cup 10 0
-
-# exit
 delay=0.05
 if [ -n $1 ]; then
   delay=$1
@@ -27,7 +19,6 @@ while read -r line; do
   if [[ -n "${char// }" ]]; then
     tput cup $row $col
     echo -n "$char"
-    #echo "!$row:$col $code"
     sleep $delay
   fi
 done
