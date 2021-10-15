@@ -1,6 +1,4 @@
-NELINE="
-"
-NCODE=$(echo "${NEWLINE}" | hexdump -v -e '/1 "%02X\n"')
+NCODE=$(echo | hexdump -v -e '/1 "%02X\n"')
 
 row=0
 col=0

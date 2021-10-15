@@ -12,15 +12,15 @@ while read -r line; do
   row=$(echo "$line" | cut -d' ' -f1)
   col=$(echo "$line" | cut -d' ' -f2)
   code=$(echo "$line" | cut -d' ' -f3)
-  char=$(echo -n "$code" | xxd -r -p)
+  char=$(echo -n "$code" | xxd -r -p | xargs)
   if [ "$row" -gt "$maxrow" ]; then
     maxrow=$row
   fi
-  if [[ -n "${char// }" ]]; then
+  if [ -n "$char" ]; then
     tput cup $row $col
     echo -n "$char"
     sleep $delay
   fi
 done
 
-tput cup $maxrow 0
+tput cup $((maxrow+1)) 0
