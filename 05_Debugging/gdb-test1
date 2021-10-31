@@ -1,0 +1,15 @@
+file range
+set args 1 12
+b 43
+run
+while (1)
+ if i%5==0
+  printf "\n@@@ i=%d (start=%d, end=%d, step=%d)\n", i, m, n, s
+ end
+ continue
+end
+
+#info locals
+#list
+kill
+quit
