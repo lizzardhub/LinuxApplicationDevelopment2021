@@ -21,3 +21,7 @@ if [ ! -f "myfile2.tmp" ]; then
     exit 1
 fi
 diff myfile1.back.tmp myfile2.tmp
+if [ "$?" -ne "0" ]; then
+    echo "Files differ after moving"
+    exit 1
+fi
