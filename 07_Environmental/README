@@ -1,0 +1,24 @@
+rhasher - a C wrapper over the hashing library librhash
+
+============
+Dependencies
+
+librhash and its headers must be installed. On ubuntu or debian-based OS:
+
+sudo apt-get install rhash librhash-dev
+
+Packages related to "make" and "autotools" must be installed.
+
+libreadline may be installed for better interactive use.
+
+============
+Compile
+
+After installing all dependecies, run:
+
+autoreconf -iv
+./configure [--with-readline=yes/no]
+make
+(make check)
+
+To remove some generated files, run "make clean".
