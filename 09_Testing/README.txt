@@ -1,4 +1,4 @@
-## Компиляция и запуск тестов
+Компиляция и запуск тестов
 
 mkdir build
 cd build
@@ -8,7 +8,7 @@ make ExperimentalCoverage
 
 Удалить генераты через rm -r ../build/*
 
-## Использовались материалы
+Использовались материалы
 
 https://cliutils.gitlab.io/modern-cmake/chapters/features/cpp11.html (опции компиляторов в CMake)
 https://habr.com/ru/post/433822/ (тестирование в CMake)
