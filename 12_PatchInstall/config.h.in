@@ -1,0 +1,8 @@
+// CMake generates "config.h" from "config.h.in"
+
+#ifndef CONFIG_H_IN
+#define CONFIG_H_IN
+ 
+#define LOCALE_PATH "../@LOCALE_PATH@"
+ 
+#endif // CONFIG_H_IN
